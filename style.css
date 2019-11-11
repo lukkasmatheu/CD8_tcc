@@ -1,0 +1,187 @@
+body{
+    padding: 0;
+    margin:0;
+    font-family:'Quicksand',monospace,sans-serif;
+}
+nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100px;
+    padding:8px 100px 8px 80px;
+    box-sizing: border-box;
+    transition:.3s;
+    background:linear-gradient(40deg,rgba(0, 0, 0,0.1),rgba(0, 0, 0,0.5));
+    transition: .4s;
+}
+
+nav.black{
+    background:rgba(255,0,0,0.8);
+    height: 100px;
+    padding: 10px 100px;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    list-style: none;
+    float: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    line-height: 80px;
+    color: #fff;
+    text-shadow: 1px 1px black;
+    padding:12px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+nav.black a:hover{
+  background: black;
+  border-radius: 6px;
+  color: #fff;
+
+}
+nav.black ul li a{
+    color: #fff;
+}
+nav a:hover{
+    background: red;
+    border-radius: 6px;
+}
+nav ul li a:focus{
+    outline: none;
+}
+#home, #how, #hot{
+  width: 100%;
+  height: 75px;
+  background: black;
+}
+#hot{
+  background: black;
+}
+section.fdn {
+    background: url('CD8 Site.jpg');
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home , .project, .how{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size:20px;
+    background: black;
+    color: #f1f1f1;
+  }
+.how{
+    background: url(fndu.jpg);
+    background-color: black;
+    background-position: right;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.project {
+    background: url(images.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position:static;
+}
+ .how p, .home p{
+   max-width:900px;
+   margin:30px auto;
+   text-align:Justify;
+   line-height: 30px;
+}
+.project p{
+    position: relative;
+    top:36%;
+    color: white;
+}
+a.active{
+  text-decoration: none;
+  padding: 20px 40px;
+  background: rgb(0,0,0);
+  color: #AAA;
+  border-radius:6px;
+  position:relative;
+  top: 75%;
+  transition: 0.5s;
+}
+a:hover.active{
+  border: 3px solid black;
+  background:transparent !important;
+  color: #f1f1f1;
+}
+nav .logo {
+  font-size: 36px;
+  font-family: 'Noto Serif', serif;
+  background: -webkit-linear-gradient(rgba(255, 0, 0,0.9),rgb(0, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contato{
+  position:sticky;
+  max-width:250px;
+  max-height:300px;
+  line-height: 50px;
+  text-align:left;
+  top:40%;
+  left:65%;
+}
+.contato li{
+  list-style: none;
+}
+.contato li ul{
+  list-style: none;
+}
+.contato li ul a{
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .5s;
+}
+a.lnk{
+  color:#fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  transition: .3s;
+}
+a:hover.lnk{
+  padding: 10px 20px;
+  color:red;
+  background:repeating-linear-gradient(40deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+}
+nav.black .logo {
+  background: -webkit-linear-gradient(#333,rgba(255, 0, 0,0.9));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.kab{
+  list-style: none;
+}
+.kab li{
+  list-style: none;
+}
