@@ -79,7 +79,7 @@ nav a:hover{
   width: 40px;
   height: 40px;
   cursor:pointer;
-  float: right;
+
   transition:  all 0.3s ease-out;
   visibility: hidden;
   opacity: 0;
@@ -91,13 +91,13 @@ nav a:hover{
   backface-visibility: hidden;
   margin: 5px auto;
 }
-#toggle .on #one{
-  transform: rotate(35deg) translateX(2px) translateY(4px);
+#toggle.on #one{
+  transform: rotate(45deg) translateX(2px) translateY(4px);
 }
-#toggle .on #two{
+#toggle.on #two{
   opacity: 0;
 }
-#toggle .on #three{
+#toggle.on #three{
   transform: rotate(-45deg) translateX(8px) translateY(-10px);
 }
 
@@ -105,9 +105,9 @@ nav a:hover{
   z-index: 1;
   top: 0px;
   position: absolute;
-  background: black;
+  background: rgba(0,0,0,0.96);
   width: 100%;
-  height: 100%;
+  height: auto;
   visibility: hidden;
   opacity: 0;
   transition: all .3s ease-out;
@@ -116,21 +116,28 @@ nav a:hover{
   height: 50px;
   display:table-cell;
   vertical-align: center;
+
 }
 #resize #menu li{
   display: block;
   text-align: center;
-  padding: 20px;
+  align-items: center;
   font-size: 50px;
-  min-height: 50px;
+  margin: 5px;
   font-weight: 200;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
 #resize #menu li a{
+  padding: 5px 40px ;
   color: #f1f1f1;
+  text-decoration: none;
 }
-#resize .active{
+#resize #menu li a:hover{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+#resize.active{
   visibility: visible;
   opacity: 0.99;
 }
@@ -147,26 +154,35 @@ nav a:hover{
   nav #menu{
     display: none;
   }
+  body{
+    width: 100%;
+    height: auto;
+  }
+ #games img ,#eat img {
+    width: 100%;
+    height: auto;
+  }
 }
 @media(min-width:768){
   #resize{
     visibility: hidden !important;
   }
+  body{
+    width: 100%;
+  }
 }
 #whoare{
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align:center;
-    background: url("img/front.jpg");
-    background-repeat: no-repeat;
-    background-position:center;
+    background: url("../img/front.jpg") no-repeat center;
     background-size: cover;
-    color: #f1f1f1;
     border-radius: 0px 0px 10px 10px;
     margin-top: 05px;
-    border-top: 1px solid black
+}
+#whoare p{
+  margin: 10px 40px 20px;
 }
 #whoare div{
   background: rgba(0,0,0,0.8);
@@ -179,7 +195,7 @@ nav a:hover{
   padding:07px 20px;
   color: white;
   text-decoration:none;
-  border-radius: 05px;
+  border-radius: 08px;
   transition: .5s;
 }
 #whoare a:hover{
@@ -187,17 +203,14 @@ nav a:hover{
   color:white;
   border: 2px solid black;
 }
-/*#whoare p,#objective p,#games p,#cotanto p{
-    margin: 30px auto;
-    width: 750px;
-}*/
+
 #objective ,#games ,#eat {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align:center;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 10px 0;
+    margin: 10px 40px;
 }
 #eat img,#games img{
     max-width: 550px;
@@ -213,7 +226,7 @@ nav a:hover{
     margin:10px 0px -10px 0px;
     padding-top:05px;
     align-items: center;
-    border: 2px groove black;
+    border: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background:#0e0e0f;
@@ -231,11 +244,10 @@ nav a:hover{
   background: rgba(255,255,255,0.1);
 }
 footer{
-    background-color: ;
     width: 100%;
     text-align: center;
     font-size: 15px;
     font-family: "Roboto";
+    border: 0;
     border-radius: 10px 10px 0px 0px;
-    padding:1px;
 }
